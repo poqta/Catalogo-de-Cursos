@@ -1,0 +1,78 @@
+<!-- index.html (mockup estático) -->
+<!-- Generado con ayuda de Copilot: estructura básica y color #0099A8 -->
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catálogo de Cursos</title>
+    <style>
+        :root {
+            --brand: lightblue;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 24px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* centra el contenido dentro del header */
+            background: var(--brand);
+            font-size: 24px;
+            color: black;
+            padding: 12px 16px;
+            border-radius: 8px;
+            max-width: 1000px; /* limita el ancho del header */
+            margin: 0 auto; /* centra el bloque header en la página */
+        }
+        header h1 { margin: 0; }
+
+        .search {
+            margin: 16px 0;
+        }
+
+        .course {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Cursos</h1>
+    </header>
+    <div class="search">
+        <label for="q">Buscar:</label>
+        <input id="q" placeholder="Escriba para filtrar..." oninput="filter()" />
+    </div>
+    <div id="list"></div>
+    <script>
+        const data = [
+            { id: 1, name: 'Algoritmos I', area: 'CS' },
+            { id: 2, name: 'Introducción a la Programación', area: 'CS' },
+            { id: 3, name: 'Matemática Básica', area: 'Math' },
+            { id: 4, name: 'Estructuras de Datos', area: 'CS' },
+            { id: 5, name: 'Cálculo I', area: 'Math' }
+
+        ];
+        function render(items) {
+            const list = document.getElementById('list');
+            list.innerHTML = items.map(c =>
+                `<div class="course">[${c.id}] ${c.name} - ${c.area}</div>`).join('');
+        }
+        function filter() {
+            const q = document.getElementById('q').value.toLowerCase();
+            render(data.filter(c => c.name.toLowerCase().includes(q)));
+        }
+        render(data);
+    </script>
+</body>
+
+</html>
