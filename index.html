@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Catálogo de Cursos</title>
+    <title>CDC</title>
     <style>
         :root {
             --brand: lightblue;
@@ -15,6 +15,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 24px;
+            background-color: lightgray;
         }
 
         header {
@@ -36,7 +37,7 @@
         }
 
         .course {
-            border: 1px solid #e5e7eb;
+            border: 1px solid lighgray;
             border-radius: 8px;
             padding: 12px;
             margin-bottom: 8px;
@@ -46,26 +47,26 @@
 
 <body>
     <header>
-        <h1>Catálogo de Cursos</h1>
+        <h1>Catálogo de Cursos Académicos</h1>
     </header>
     <div class="search">
-        <label for="q">Buscar:</label>
+        <label for="q">Buscar curso:</label>
         <input id="q" placeholder="Escriba para filtrar..." oninput="filter()" />
     </div>
     <div id="list"></div>
     <script>
         const data = [
-            { id: 1, name: 'Algoritmos I', area: 'CS' },
-            { id: 2, name: 'Introducción a la Programación', area: 'CS' },
-            { id: 3, name: 'Matemática Básica', area: 'Math' },
-            { id: 4, name: 'Estructuras de Datos', area: 'CS' },
-            { id: 5, name: 'Cálculo I', area: 'Math' }
+            { id: 1, name: 'Comunicación y Lenguaje II', area: 'CYLII' },
+            { id: 2, name: 'Introducción a la Programación', area: 'IP' },
+            { id: 3, name: 'Matemática Básica', area: 'MB' },
+            { id: 4, name: 'Bases de Datos', area: 'BD' },
+            { id: 5, name: 'Cálculo I', area: 'CI' }
 
         ];
         function render(items) {
             const list = document.getElementById('list');
             list.innerHTML = items.map(c =>
-                `<div class="course">[${c.id}] ${c.name} - ${c.area}</div>`).join('');
+                `<div class="course">${c.id}. ${c.name} / ${c.area}</div>`).join('');
         }
         function filter() {
             const q = document.getElementById('q').value.toLowerCase();
