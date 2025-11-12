@@ -1,23 +1,24 @@
-# Catálogo de Cursos (C# .NET Framework)
+# Catálogo de Cursos (HTML)
 Mini app desarrollada como parte del caso práctico de la asignatura **Plataformas de Colaboración Digital**.
 
 ## Ejecución
-1. Clonar el repositorio o descargar el ZIP.
-2. Abrir el proyecto en Visual Studio.
-3. Ejecutar el archivo `Program.cs`.
-4. En la consola, escriba una palabra clave (por ejemplo, "Algoritmos") para filtrar los cursos.
+1. Clonar el repositorio o descargar el archivo ZIP.  
+2. Abrir la carpeta del proyecto en **Visual Studio Code**.  
+3. Abrir el archivo `index.html`.  
+4. Ejecutar el proyecto abriendo el archivo en el navegador o utilizando la extensión **Go live**.
 
 ## Funcionalidad
-- Muestra una lista de 5 cursos de ejemplo.
-- Permite buscar por texto en el nombre del curso.
-- Indica la cantidad total de resultados encontrados.
+- Muestra un catálogo con una lista de cursos de ejemplo.  
+- Permite navegar o filtrar entre los cursos (según la versión implementada).  
+- Presenta un diseño simple y organizado en **HTML**.
 
 ## Definition of Done (DoD)
-- El programa compila y ejecuta correctamente.
-- El filtro de búsqueda funciona.
-- README actualizado.
-- Evidencias adjuntas (capturas, commits).
-- Fechas y responsables registrados en Trello.
+- La estructura HTML está completa y validada.  
+- El diseño es funcional y visualmente coherente.  
+- Se puede visualizar correctamente en el navegador.  
+- **README** actualizado.  
+- Evidencias adjuntas (capturas, commits).  
+- Fechas y responsables registrados en **Trello**.
 
-##Autores
-Equipo: Patricia Oquist Talavera Y Hendrix Aguirre Zamora
+## Autores
+Equipo: **Patricia Oquist Talavera**, **Hendrix Aguirre Zamora** y **Mauro Pérez**.
